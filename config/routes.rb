@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Events
+  resources :events
+
+  ## Home page
+  root 'events#index'
 end
