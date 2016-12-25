@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EventTracker</title>
+    <title>Event Tracker</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h1><%= link_to 'Event Tracker', events_path %></h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

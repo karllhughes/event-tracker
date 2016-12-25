@@ -1,2 +1,17 @@
-<h1>Events</h1>
-<p>A list of events will go here.</p>
+<div class="row">
+  <% @events.each do |event| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title"><%= event.title %></h4>
+          <p class="card-text"><%= event.starts_at.strftime("%A, %B %d, %Y") %></p>
+          <p class="card-text"><%= event.location %></p>
+          <%= link_to "Details", event_path(event), class: "btn btn-primary"  %>
+          <%= link_to "Edit", edit_event_path(event), class: "btn btn-warning"  %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Create event', new_event_path %>
