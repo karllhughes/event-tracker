@@ -1,0 +1,5 @@
+<p class="card-text">Start Date: <%= event.starts_at.strftime("%A, %B %d, %Y") %></p>
+<p class="card-text">Registration Starts: <%= event.registration_starts_at.strftime("%B %d, %Y") %></p>
+<p class="card-text">Registration Ends: <%= event.registration_ends_at.strftime("%B %d, %Y") %></p>
+<p class="card-text">Location: <%= event.location %></p>
+<p class="card-text">Cost: $<%= event.cost %></p>
