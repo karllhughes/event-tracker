@@ -15,12 +15,16 @@ ActiveRecord::Schema.define(version: 20161203190035) do
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
+    t.string   "location"
+    t.decimal  "cost"
     t.string   "url"
+    t.string   "image"
+    t.datetime "registration_starts_at"
+    t.datetime "registration_ends_at"
     t.datetime "starts_at"
     t.datetime "ends_at"
-    t.string   "location"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

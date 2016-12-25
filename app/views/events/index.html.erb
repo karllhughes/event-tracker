@@ -1,7 +1,7 @@
 <div class="row">
-  <% @events.each do |event| %>
+  <% @events.each_with_index do |event, index| %>
     <div class="col-md-4">
-      <div class="card">
+      <div id="card-<%= index %>" class="card">
         <div class="card-block">
           <h4 class="card-title"><%= event.title %></h4>
           <p class="card-text"><%= event.starts_at.strftime("%A, %B %d, %Y") %></p>
@@ -11,6 +11,9 @@
         </div>
       </div>
     </div>
+    <% if (index + 1) % 3 == 0 %>
+      </div><div class="row">
+    <% end %>
   <% end %>
 </div>
 
