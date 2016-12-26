@@ -1,0 +1,21 @@
+<div class="row order-by" role="navigation">
+  <div class="col-xs-12">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link <% if params[:order_by] == 'starts_at' or not params[:order_by] %>active<% end %>" href="?order_by=starts_at">Start Date</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <% if params[:order_by] == 'registration_starts_at' %>active<% end %>" href="?order_by=registration_starts_at">Registration Start</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <% if params[:order_by] == 'registration_ends_at' %>active<% end %>" href="?order_by=registration_ends_at">Registration End</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <% if params[:order_by] == 'created_at' %>active<% end %>" href="?order_by=created_at">Date Added</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <% if params[:order_by] == 'title' %>active<% end %>" href="?order_by=title">Event Title</a>
+      </li>
+    </ul>
+  </div>
+</div>

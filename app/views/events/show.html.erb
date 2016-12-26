@@ -1,7 +1,11 @@
 <div class="card">
-  <img class="card-img-top" src="<%= @event.image %>" alt="<%= @event.title %>">
   <div class="card-block">
     <h2 class="card-title"><%= @event.title %></h2>
+  </div>
+  <% if @event.image %>
+    <img class="card-img-top" src="<%= @event.image %>" alt="<%= @event.title %>">
+  <% end %>
+  <div class="card-block">
     <p class="card-text"><%= @event.description %></p>
     <%= render template: "events/components/meta", locals: {event: @event} %>
     <%= link_to "Link", @event.url, class: "btn btn-primary"  %>

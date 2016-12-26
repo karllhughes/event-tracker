@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
   # View all events
   def index
-    @events = Event.all
+    @events = Event.order(order_by).all
   end
 
   # View single Event
@@ -13,11 +13,14 @@ class EventsController < ApplicationController
   # New Event page
   def new
     @event = Event.new
+    @title = "Create event"
+    render 'edit'
   end
 
   # Edit Event page
   def edit
     @event = Event.find(params[:id])
+    @title = "Edit event"
   end
 
   # Submit Event creation form
@@ -27,7 +30,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to @event
     else
-      render 'new'
+      render 'edit'
     end
   end
 
@@ -61,6 +64,14 @@ class EventsController < ApplicationController
           :ends_at,
           :location
       )
+    end
+
+    def order_by
+      if params[:order_by]
+        params[:order_by] + ' ASC'
+      else
+        'starts_at ASC'
+      end
     end
 
 end

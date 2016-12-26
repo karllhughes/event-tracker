@@ -12,9 +12,9 @@ Event.delete_all
       cost: Faker::Number.decimal(2),
       url: Faker::Internet.url,
       image: Faker::LoremPixel.image('300x150'),
-      registration_starts_at: Faker::Date.forward(0),
-      registration_ends_at: Faker::Date.forward(0),
-      starts_at: Faker::Date.forward(0),
-      ends_at: Faker::Date.forward(0),
+      registration_starts_at: Faker::Date.forward(365),
+      registration_ends_at: Faker::Date.forward(365),
+      starts_at: Faker::Date.forward(365),
+      ends_at: Faker::Date.forward(365),
   )
 end
