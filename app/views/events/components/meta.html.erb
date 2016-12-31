@@ -1,5 +1,19 @@
-<p class="card-text">Start Date: <%= event.starts_at.strftime("%A, %B %d, %Y") %></p>
-<p class="card-text">Registration Starts: <%= event.registration_starts_at.strftime("%B %d, %Y") %></p>
-<p class="card-text">Registration Ends: <%= event.registration_ends_at.strftime("%B %d, %Y") %></p>
-<p class="card-text">Location: <%= event.location %></p>
-<p class="card-text">Cost: $<%= event.cost %></p>
+<% if event.starts_at %>
+  <p class="card-text">Start Date: <%= event.starts_at.strftime("%A, %B %d, %Y") %></p>
+<% end %>
+
+<% if event.registration_starts_at %>
+  <p class="card-text">Registration Starts: <%= event.registration_starts_at.strftime("%B %d, %Y") %></p>
+<% end %>
+
+<% if event.registration_ends_at %>
+  <p class="card-text">Registration Ends: <%= event.registration_ends_at.strftime("%B %d, %Y") %></p>
+<% end %>
+
+<% if event.location %>
+  <p class="card-text">Location: <%= event.location %></p>
+<% end %>
+
+<% if event.cost %>
+  <p class="card-text">Cost: $<%= event.cost %></p>
+<% end %>

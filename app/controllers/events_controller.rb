@@ -59,10 +59,14 @@ class EventsController < ApplicationController
       params[:event].permit(
           :title,
           :description,
+          :location,
+          :cost,
           :url,
+          :image,
+          :registration_starts_at,
+          :registration_ends_at,
           :starts_at,
-          :ends_at,
-          :location
+          :ends_at
       )
     end
 

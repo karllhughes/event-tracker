@@ -17,3 +17,8 @@
 .container {
   margin: 2rem auto;
 }
+
+.required label:after {
+  color: $brand-danger;
+  content: "*"
+}
