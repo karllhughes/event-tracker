@@ -10,7 +10,7 @@
   <p class="card-text">Registration Ends: <%= event.registration_ends_at.strftime("%B %d, %Y") %></p>
 <% end %>
 
-<% if event.location & event.location.length > 0 %>
+<% if event.location and event.location.length > 0 %>
   <p class="card-text">Location: <%= event.location %></p>
 <% end %>
 
