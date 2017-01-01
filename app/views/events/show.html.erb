@@ -2,7 +2,7 @@
   <div class="card-block">
     <h2 class="card-title"><%= @event.title %></h2>
   </div>
-  <% if @event.image.length > 0 %>
+  <% if @event.image and @event.image.length > 0 %>
     <img class="card-img-top" src="<%= @event.image %>" alt="<%= @event.title %>">
   <% end %>
   <div class="card-block">
