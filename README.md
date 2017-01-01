@@ -40,7 +40,4 @@ Coming soon
 
 
 ## Testing
-
-```
-Coming soon
-```
+Run tests via the command line: `rails test`.
