@@ -22,7 +22,7 @@ A simple Rails application to track and organize events that I might want to att
 
 2. Run `bundle install` to get the dependencies installed.
 
-3. Run database migrations: `rails db:migrate`.
+3. Run database migrations: `rails db:setup`.
 
 4. (Optional) Seed the database with some dummy data: `rails db:seed`.
 
