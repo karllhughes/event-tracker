@@ -17,3 +17,4 @@ test:
 production:
   <<: *default
   database: event_tracker_prod
+  url: <%= ENV['DATABASE_URL'] %>
