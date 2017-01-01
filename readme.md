@@ -38,8 +38,12 @@ Coming soon
 
 ## Configuration
 
-```
-Coming soon
+```env
+# Basic auth username
+HTTP_USERNAME=admin
+# Basic auth password
+HTTP_PASSWORD=
+
 ```
 
 

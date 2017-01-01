@@ -1,4 +1,10 @@
 class EventsController < ApplicationController
+  # Prevents public from editing/deleting
+  http_basic_authenticate_with(
+      name: ENV.fetch('HTTP_USERNAME', 'admin'),
+      password: ENV.fetch('HTTP_PASSWORD', ''),
+      except: [:index, :show]
+  )
 
   # View all events
   def index
@@ -54,7 +60,7 @@ class EventsController < ApplicationController
   end
 
   private
-
+    # Valid create/edit parameters for events
     def event_params
       params[:event].permit(
           :title,
@@ -70,6 +76,7 @@ class EventsController < ApplicationController
       )
     end
 
+    # Rules for ordering events
     def order_by
       if params[:order_by]
         params[:order_by] + ' ASC'

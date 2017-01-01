@@ -6,5 +6,10 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  # Basic auth login helper
+  def basic_auth_login
+    @env ||= {}
+    @env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials('admin','')
+  end
+
 end
