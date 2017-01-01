@@ -29,11 +29,13 @@ A simple Rails application to track and organize events that I might want to att
 5. Run `rails server`. The app should be running on `localhost:3000`.
 
 
-### Server setup 
+### Heroku setup 
 
-```
-Coming soon
-```
+1. Follow the [standard instructions](https://devcenter.heroku.com/articles/getting-started-with-rails5) for setting up/deploying a Rails 5 app.
+
+2. Add `HTTP_USERNAME` and `HTTP_PASSWORD` in order to lock down create/edit/delete.
+
+3. Ensure that your application is running on Heroku. That's it!
 
 
 ## Configuration
