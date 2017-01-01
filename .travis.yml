@@ -3,6 +3,9 @@ rvm:
   - 2.2.6
   - 2.3.3
 
+services:
+  - postgresql
+
 script:
-  - bin/rake db:migrate RAILS_ENV=test
+  - bin/rake db:setup RAILS_ENV=test
   - bin/rake

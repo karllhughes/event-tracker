@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Nothing yet.
 
 ### Changed
-- Nothing yet.
+- Moved to Postgresql for the primary database.
+- ID field to UUID string in Postgresql.
 
 ## [0.1.0] - 2017-01-01
 ### Added

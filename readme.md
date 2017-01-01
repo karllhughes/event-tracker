@@ -14,7 +14,7 @@ A simple Rails application to track and organize events that I might want to att
 
 - [Ruby 2.3](https://www.ruby-lang.org/)
 - [Rails 5.0](http://guides.rubyonrails.org/)
-- [Sqlite 3.14](https://sqlite.org/)
+- [Postgresql 9.5](https://www.postgresql.org/)
 
 ### Local setup
 
