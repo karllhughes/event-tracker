@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Nothing yet.
 
 ### Changed
-- Fixed edit/create bug.
+- Nothing yet.
+
+## [0.2.1] - 2017-01-01
+### Changed
+- Fixed lots of bugs that cropped up in prod, not local.
 
 ## [0.2.0] - 2017-01-01
 ### Added
