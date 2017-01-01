@@ -6,6 +6,10 @@ class EventsController < ApplicationController
       except: [:index, :show]
   )
 
+  # Register helper methods for events
+  helper_method :form_title
+  helper_method :submit_path
+
   # View all events
   def index
     @events = Event.order(order_by).all
@@ -19,14 +23,12 @@ class EventsController < ApplicationController
   # New Event page
   def new
     @event = Event.new
-    @title = "Create event"
     render 'edit'
   end
 
   # Edit Event page
   def edit
     @event = Event.find(params[:id])
-    @title = "Edit event"
   end
 
   # Submit Event creation form
@@ -57,6 +59,22 @@ class EventsController < ApplicationController
     @event.destroy
 
     redirect_to events_path
+  end
+
+  def submit_path
+    if @event.id
+      event_path(@event)
+    else
+      events_path
+    end
+  end
+
+  def form_title
+    if @event.id
+      "Edit event"
+    else
+      "Create event"
+    end
   end
 
   private
