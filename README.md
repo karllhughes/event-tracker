@@ -1,24 +1,46 @@
-# README
+Event Tracker
+==============================================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails application to track and organize events that I might want to attend. I built this simply to dive back into Ruby on Rails. 
 
-Things you may want to cover:
 
-* Ruby version
+## Application Setup
 
-* System dependencies
+### Tech requirements
 
-* Configuration
+- Ruby 2.3+
+- Rails 5.0+
+- Sqlite 3.14+
 
-* Database creation
+### Local setup
 
-* Database initialization
+1. Clone this repo locally.
 
-* How to run the test suite
+2. Run `bundle install` to get the dependencies installed.
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Run database migrations: `rails db:migrate`.
 
-* Deployment instructions
+4. (Optional) Seed the database with some dummy data: `rails db:seed`.
 
-* ...
+5. Run `rails server`. The app should be running on `localhost:3000`.
+
+
+### Server setup 
+
+```
+Coming soon
+```
+
+
+## Configuration
+
+```
+Coming soon
+```
+
+
+## Testing
+
+```
+Coming soon
+```
