@@ -1,9 +1,4 @@
-# Postgres DB Adapter
-#   gem install pg
-#
-#   Ensure the Postgres gem is defined in your Gemfile
-#   gem 'pg'
-#
+# Use Postgres for database in all environments
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -22,3 +17,5 @@ test:
 production:
   <<: *default
   database: event_tracker_prod
+  username: <% ENV['DB_USERNAME'] %>
+  password: <% ENV['DB_PASSWORD'] %>

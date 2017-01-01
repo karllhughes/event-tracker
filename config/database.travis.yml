@@ -1,0 +1,11 @@
+# Travis Posgres config
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+test:
+  <<: *default
+  database: event_tracker_test
+  username: postgres
+  password:
