@@ -1,6 +1,10 @@
 class CreateEvents < ActiveRecord::Migration[5.0]
   def change
-    create_table :events do |t|
+    # Enable uuids in postgres
+    enable_extension 'uuid-ossp'
+
+    # Create the events table
+    create_table :events, id: :uuid do |t|
       t.string :title
       t.text :description
       t.string :location
