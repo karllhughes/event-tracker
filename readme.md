@@ -5,16 +5,16 @@ Event Tracker
 [![Software License](https://img.shields.io/badge/license-APACHE%202.0-brightgreen.svg?style=flat-square)](license.md)
 [![Build Status](https://img.shields.io/travis/karllhughes/event-tracker/master.svg?style=flat-square&1)](https://travis-ci.org/karllhughes/event-tracker)
 
-A simple Rails application to track and organize events that I might want to attend. I built this simply to dive back into Ruby on Rails, but feel free to use it if you'd like.
+A simple Rails application to track and organize events that I might want to attend. I built this as an excuse to dive back into Ruby on Rails, but feel free to use it if you'd like.
 
 
 ## Application Setup
 
 ### Tech requirements
 
-- Ruby 2.3+
-- Rails 5.0+
-- Sqlite 3.14+
+- [Ruby 2.3](https://www.ruby-lang.org/)
+- [Rails 5.0](http://guides.rubyonrails.org/)
+- [Sqlite 3.14](https://sqlite.org/)
 
 ### Local setup
 
