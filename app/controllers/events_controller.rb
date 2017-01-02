@@ -71,9 +71,9 @@ class EventsController < ApplicationController
 
   def form_title
     if @event.id
-      "Edit event"
+      "Edit Event"
     else
-      "Create event"
+      "Create Event"
     end
   end
 
@@ -97,8 +97,15 @@ class EventsController < ApplicationController
     # Rules for ordering events
     def order_by
       if params[:order_by]
-        params[:order_by] + ' ASC'
+        if params[:order_by] == 'created_at'
+          # If created at, get newest first
+          params[:order_by] + ' DESC'
+        else
+          # Otherwise, get closest to now
+          params[:order_by] + ' ASC'
+        end
       else
+        # Default to start date, ascending
         'starts_at ASC'
       end
     end

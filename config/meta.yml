@@ -1,0 +1,11 @@
+defaults: &defaults
+  site_name: <%= ENV.fetch('SITE_NAME', 'Event Tracker') %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
