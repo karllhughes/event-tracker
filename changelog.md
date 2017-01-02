@@ -16,13 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.3.0] - 2017-01-02
 ### Added
-- Viewport head element to fix mobile scaling issue.
+- Viewport head element to fix mobile scaling issue and favicon.
 - Site name variable and meta config file.
 - Titles to pages: Home, single event, edit event, create event, sorting events.
-- Navbar with logo, link to home page, site name, and dropdown for order.
-
-### Changed
-- Nothing yet.
+- Navbar with logo, link to home page, site name.
+- New dropdown for selecting order of events on home page.
 
 ### Removed
 - Unused Bootstrap JS files.
