@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   # View all events
   def index
-    @events = Event.order(order_by).all
+    @events = Event.order(order_by).active
   end
 
   # View single Event

@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Navbar with logo, link to home page, site name.
 - New dropdown for selecting order of events on home page.
 
+### Changed
+- Hiding past events by default.
+
 ### Removed
 - Unused Bootstrap JS files.
 
