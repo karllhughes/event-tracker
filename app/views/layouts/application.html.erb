@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><%= content_for?(:title) ? content_for(:title) : site_name %></title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,11 +16,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-faded">
+    <nav class="navbar navbar-light bg-faded navbar-main">
       <h1 class="navbar-brand">
         <img src="<%= image_path('logo-64.png') %>" width="30" height="30" class="d-inline-block align-top" alt="">
         <%= link_to site_name, '/' %>
       </h1>
+      <%= link_to 'Create Event', new_event_path, class: "btn btn-outline-primary float-xs-right" %>
     </nav>
     <div class="container">
       <%= yield %>

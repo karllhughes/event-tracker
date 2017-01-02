@@ -13,17 +13,19 @@
  */
 @import "bootstrap";
 @import "events";
+.navbar-main {
+  padding: 1rem;
 
-h1.navbar-brand {
-  margin-top: .25rem;
-  margin-bottom: .25rem;
+  h1.navbar-brand {
+    margin-bottom: 0;
 
-  img {
-    margin-right: .5rem;
-  }
+    img {
+      margin-right: .5rem;
+    }
 
-  a:hover, a:active, a:focus {
-    text-decoration: none;
+    a:hover, a:active, a:focus {
+      text-decoration: none;
+    }
   }
 }
 

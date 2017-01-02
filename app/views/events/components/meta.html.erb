@@ -15,5 +15,5 @@
 <% end %>
 
 <% if event.cost %>
-  <p class="card-text">Cost: $<%= event.cost %></p>
+  <p class="card-text">Cost: <%= number_to_currency(event.cost) %></p>
 <% end %>
