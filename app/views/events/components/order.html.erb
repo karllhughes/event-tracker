@@ -1,21 +1,41 @@
-<div class="row order-by" role="navigation">
-  <div class="col-xs-12">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link <% if params[:order_by] == 'starts_at' or not params[:order_by] %>active<% end %>" href="?order_by=starts_at">Start Date</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <% if params[:order_by] == 'registration_starts_at' %>active<% end %>" href="?order_by=registration_starts_at">Registration Start</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <% if params[:order_by] == 'registration_ends_at' %>active<% end %>" href="?order_by=registration_ends_at">Registration End</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <% if params[:order_by] == 'created_at' %>active<% end %>" href="?order_by=created_at">Date Added</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <% if params[:order_by] == 'title' %>active<% end %>" href="?order_by=title">Event Title</a>
-      </li>
-    </ul>
+
+<button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+  <%= all_events_title(params[:order_by]) ? all_events_title(params[:order_by]) : 'Sort by...' %>
+</button>
+<nav class="navbar navbar-light bg-faded">
+  <div class="collapse" id="exCollapsingNavbar">
+    <div class="p-1">
+      <div class="row order-by" role="navigation">
+        <div class="col-xs-12">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item">
+              <a class="nav-link <% if params[:order_by] == 'starts_at' or not params[:order_by] %>active<% end %>" href="?order_by=starts_at">
+                Starting Soon
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <% if params[:order_by] == 'registration_starts_at' %>active<% end %>" href="?order_by=registration_starts_at">
+                Registration Starts Soon
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <% if params[:order_by] == 'registration_ends_at' %>active<% end %>" href="?order_by=registration_ends_at">
+                Registration Ends Soon
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <% if params[:order_by] == 'created_at' %>active<% end %>" href="?order_by=created_at">
+                Newest First
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <% if params[:order_by] == 'title' %>active<% end %>" href="?order_by=title">
+                Alphabetical
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</nav>

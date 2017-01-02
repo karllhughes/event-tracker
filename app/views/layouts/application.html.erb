@@ -13,8 +13,13 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-faded">
+      <h1 class="navbar-brand">
+        <img src="<%= image_path('logo-64.png') %>" width="30" height="30" class="d-inline-block align-top" alt="">
+        <%= link_to site_name, '/' %>
+      </h1>
+    </nav>
     <div class="container">
-      <h1><%= link_to site_name, '/' %></h1>
       <%= yield %>
     </div>
   </body>

@@ -14,6 +14,19 @@
 @import "bootstrap";
 @import "events";
 
+h1.navbar-brand {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+
+  img {
+    margin-right: .5rem;
+  }
+
+  a:hover, a:active, a:focus {
+    text-decoration: none;
+  }
+}
+
 .container {
   margin: 2rem auto;
 }
