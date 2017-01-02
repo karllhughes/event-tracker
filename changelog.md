@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Nothing yet.
 
+### Removed
+- Bootstrap JS as we're not using any features.
+
 ## [0.2.1] - 2017-01-01
 ### Changed
 - Fixed lots of bugs that cropped up in prod, not local.
